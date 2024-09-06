@@ -24,7 +24,7 @@ response = HTTParty.post(
   }.to_json
 )
 
-message = JSON.parse(response.body)['response']
+message = JSON.parse(response.body)['response'].chomp
 
 puts "Commit message: #{message}"
 print 'Enter y(yes) if you want to commit the changes: '
@@ -32,7 +32,7 @@ choice = gets.strip
 
 if choice == 'y'
   `git add .`
-  `git commit -am #{message}`
+  `git commit -m "#{message}"`
 else
   puts 'commit aborted!'
 end
