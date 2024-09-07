@@ -5,6 +5,7 @@ Ollama(*optional*) - https://ollama.com
 AI model - Gemma2:2b
 
 ## Run as binary
+**for linux*
 
 Switch to repo
 
